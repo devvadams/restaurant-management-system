@@ -1,0 +1,7 @@
+ 
+{
+    "java.project.referencedLibraries": [
+      "C:/Program Files/javafx-sdk-17.0.14/lib/*.jar"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+  }

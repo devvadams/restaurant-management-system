@@ -1,0 +1,70 @@
+/* Main tab pane styling */
+.tab-pane {
+    -fx-tab-min-width: 120px;
+    -fx-tab-max-width: 120px;
+}
+
+.tab {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Table buttons styling */
+.table-button {
+    -fx-min-width: 100px;
+    -fx-min-height: 80px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+}
+
+.table-button-available {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.table-button-occupied {
+    -fx-background-color: #F44336;
+    -fx-text-fill: white;
+}
+
+.table-button-reserved {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white;
+}
+
+.table-button-cleaning {
+    -fx-background-color: #FFEB3B;
+    -fx-text-fill: #333;
+}
+
+/* Orders table styling */
+.table-view {
+    -fx-base: #f8f8f8;
+    -fx-control-inner-background: #ffffff;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3f51b5;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+    -fx-text-fill: white;
+}
+
+/* Menu items styling */
+.menu-item-cell {
+    -fx-padding: 10px;
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #eee;
+    -fx-border-width: 1px;
+}
+
+.menu-item-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
