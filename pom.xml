@@ -40,6 +40,7 @@
     </dependencies>
 
     <build>
+        
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,6 +53,7 @@
                 <version>0.0.8</version>
                 <configuration>
                     <mainClass>com.example.RestaurantDashboard</mainClass>
+                     <executable>${java.home}/bin/java</executable>
                 </configuration>
             </plugin>
         </plugins>

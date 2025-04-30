@@ -1,7 +1,8 @@
-C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\MenuItem.java
-C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\MenuItemCell.java
-C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\RestaurantEnums.java
-C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\StatusCell.java
-C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\Table.java
-C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\Order.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\view\cells\MenuItemCell.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\model\RestaurantEnums.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\view\cells\StatusCell.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\components\ErrorAlert.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\model\Order.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\model\Table.java
+C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\model\MenuItem.java
 C:\Users\User\Desktop\restaurant-management-system\src\main\java\com\example\RestaurantDashboard.java

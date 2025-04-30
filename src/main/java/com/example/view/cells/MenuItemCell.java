@@ -1,11 +1,10 @@
 package com.example.view.cells;
 
 import com.example.model.MenuItem;
-
 import javafx.scene.control.ListCell;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
+import javafx.scene.layout.VBox;
 
 public class MenuItemCell extends ListCell<MenuItem> {
     @Override
@@ -14,23 +13,35 @@ public class MenuItemCell extends ListCell<MenuItem> {
         
         if (empty || item == null) {
             setGraphic(null);
+            setText(null);
         } else {
-            HBox container = new HBox(10);
+            VBox container = new VBox(5);
+            Label nameLabel = new Label(item.getName());
+            nameLabel.setStyle("-fx-font-weight: bold;");
             
-            Text nameText = new Text(item.getName());
-            nameText.setStyle("-fx-font-weight: bold;");
+            Label descLabel = new Label(item.getDescription());
+            descLabel.setStyle("-fx-text-fill: #666666; -fx-font-size: 0.9em;");
             
-            Text priceText = new Text(String.format("$%.2f", item.getPrice()));
-            priceText.setStyle("-fx-fill: #2e8b57; -fx-font-weight: bold;");
+            HBox bottomRow = new HBox(10);
+            Label priceLabel = new Label(String.format("$%.2f", item.getPrice()));
+            priceLabel.setStyle("-fx-text-fill: #2e8b57; -fx-font-weight: bold;");
             
-            Text descriptionText = new Text(item.getDescription());
-            descriptionText.setStyle("-fx-fill: #666; -fx-font-size: 0.9em;");
+            HBox tags = new HBox(5);
+            if (item.isVegetarian()) {
+                Label vegLabel = new Label("🌱 Vegetarian");
+                vegLabel.setStyle("-fx-text-fill: #2e8b57; -fx-font-size: 0.8em;");
+                tags.getChildren().add(vegLabel);
+            }
+            if (item.isSpicy()) {
+                Label spicyLabel = new Label("🌶️ Spicy");
+                spicyLabel.setStyle("-fx-text-fill: #d32f2f; -fx-font-size: 0.8em;");
+                tags.getChildren().add(spicyLabel);
+            }
             
-            TextFlow textFlow = new TextFlow(nameText, new Text(" - "), priceText, 
-                new Text("\n"), descriptionText);
-            
-            container.getChildren().add(textFlow);
+            bottomRow.getChildren().addAll(priceLabel, tags);
+            container.getChildren().addAll(nameLabel, descLabel, bottomRow);
             setGraphic(container);
+            setText(null); // Clear text to only show graphic
         }
     }
 }

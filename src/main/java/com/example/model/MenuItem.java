@@ -10,13 +10,11 @@ public class MenuItem {
     private boolean isVegetarian;
     private boolean isSpicy;
 
-    // Primary constructor matching your existing code
     public MenuItem(String name, String description, double price, MenuCategory category) {
         this(name, description, price, category, false, false);
     }
 
-    // Full constructor for future use
-    public MenuItem(String name, String description, double price, 
+    private MenuItem(String name, String description, double price, 
                    MenuCategory category, boolean isVegetarian, boolean isSpicy) {
         if (price <= 0) throw new IllegalArgumentException("Price must be positive");
         this.name = name;
@@ -35,7 +33,22 @@ public class MenuItem {
     public boolean isVegetarian() { return isVegetarian; }
     public boolean isSpicy() { return isSpicy; }
 
-    // Setters for optional properties
+    // Setters
     public void setVegetarian(boolean vegetarian) { isVegetarian = vegetarian; }
     public void setSpicy(boolean spicy) { isSpicy = spicy; }
+
+    // Factory methods
+    public static MenuItem createVegetarian(String name, String description, 
+                                          double price, MenuCategory category) {
+        MenuItem item = new MenuItem(name, description, price, category);
+        item.setVegetarian(true);
+        return item;
+    }
+
+    public static MenuItem createSpicy(String name, String description, 
+                                     double price, MenuCategory category) {
+        MenuItem item = new MenuItem(name, description, price, category);
+        item.setSpicy(true);
+        return item;
+    }
 }

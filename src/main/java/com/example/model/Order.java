@@ -15,7 +15,6 @@ public class Order {
     private final ObjectProperty<OrderStatus> status;
     private final int tableNumber;
 
-    // Constructor matching your existing code
     public Order(int id, List<MenuItem> items, int tableNumber) {
         this.id = new SimpleIntegerProperty(id);
         this.items = FXCollections.observableArrayList(items);
@@ -23,23 +22,18 @@ public class Order {
         this.tableNumber = tableNumber;
     }
 
-    // Property getters
-    public SimpleIntegerProperty idProperty() { return id; }
-    public ObjectProperty<OrderStatus> statusProperty() { return status; }
-
-    // Regular getters
+    // Getters
     public int getId() { return id.get(); }
     public ObservableList<MenuItem> getItems() { return items; }
     public OrderStatus getStatus() { return status.get(); }
     public int getTableNumber() { return tableNumber; }
 
-    // Status setter
+    // Property getters
+    public SimpleIntegerProperty idProperty() { return id; }
+    public ObjectProperty<OrderStatus> statusProperty() { return status; }
+
+    // Setter
     public void setStatus(OrderStatus status) {
         this.status.set(status);
-    }
-
-    // Helper method
-    public double getTotal() {
-        return items.stream().mapToDouble(MenuItem::getPrice).sum();
     }
 }
